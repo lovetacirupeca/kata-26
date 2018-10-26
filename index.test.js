@@ -60,11 +60,11 @@ it("Should remove empty lines", () => {
 it("Should remove comments and empty lines", () => {
     const str = `//This file contains 3 lines of code
 
-    public interface Dave {
-    /**
-     * count the number of lines in a file
-     */
-    int countLines(File inFile); // not the real signature
+public interface Dave {
+/**
+ * count the number of lines in a file
+ */
+int countLines(File inFile); // not the real signature
 }`
     expect(cleanCode(str)).toEqual(`public interface Dave {
     int countLines(File inFile);
